@@ -10,16 +10,20 @@ To Just run app:
 - "npm install --production" (to just run app and skip dev part) - static resources is already bundled in "/dist" folder
 
 For development you need to install next global dependencies:
- 
+
+Install: 
 - "npm install typings webpack-dev-server rimraf webpack -g"
 - "npm install"
 - "typings install"
-- "npm run server" to start dev server
 
+Configure Nest:
 - put to .env file your NEST_ID and NEST_SECRET
 - open you Nest product page and set "Redirect URI" to you host - "http://localhost:3000/auth/nest/callback"
-- "npm run start" to start server
-- open http://localhost:3000 in your browser
+
+Run:
+- "npm run start" to start prod server
+- "npm run server:dev" to start dev server
+-  open http://localhost:3000 in your browser
 
 Resources
 

@@ -31,9 +31,9 @@
     "test": "karma start",
     "ci": "npm run e2e && npm run test",
     "docs": "typedoc --options typedoc.json --exclude **/*.spec.ts ./src/",
-    "typings-install": "typings install",
+    "typings": "typings install",
     "server": "node server.js",
-    "start": "npm run build:prod && npm run server"
+    "start": "npm run server"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.9",

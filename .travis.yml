@@ -1,7 +1,5 @@
 sudo: required
 dist: trusty
-addons:
-  chrome: "latest"
 language: node_js
 node_js:
   - "node"
