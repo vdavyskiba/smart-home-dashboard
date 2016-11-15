@@ -1,0 +1,63 @@
+<div class="mdl-card mdl-shadow--2dp mdl-card__supporting-text">
+
+  <div class="mdl-card__title">
+    <h3 class="mdl-card__title-text">Thermostat</h3>
+  </div>
+
+  <ul *ngIf="model"
+      class="demo-list-item mdl-list">
+
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        <span class="mdl-list__item-sub-title">name</span>
+      </span>
+      <span class="mdl-list__item-secondary-content"> {{model.name}} </span>
+    </li>
+
+    <li class="mdl-list__item">
+        <span class="mdl-list__item-primary-content">
+          <span class="mdl-list__item-sub-title">location</span>
+        </span>
+      <span class="mdl-list__item-secondary-content"> {{where}} </span>
+    </li>
+
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        <span class="mdl-list__item-sub-title">connection</span>
+      </span>
+      <span class="mdl-list__item-secondary-content">
+
+        <span *ngIf="model.is_online" [class.online]="model.is_online">online</span>
+
+        <span *ngIf="!model.is_online" [class.offline]="!model.is_online">offline</span>
+
+      </span>
+    </li>
+
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        <span class="mdl-list__item-sub-title">temperature</span>
+      </span>
+      <span class="mdl-list__item-secondary-content"> {{model.target_temperature_f}} F </span>
+    </li>
+
+  </ul>
+
+  <div class="mdl-card__actions mdl-card--border">
+
+    <div class="pull-left">Set temperature</div>
+
+    <div class="pull-right">
+
+      <button (click)="increaseTemp()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+        <i class="material-icons">add</i>
+      </button>
+
+      <button (click)="decreaseTemp()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+        <i class="material-icons">remove</i>
+      </button>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="mdl-grid">
+
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--stretch">
+
+    <div class="mdl-card mdl-shadow--2dp mdl-card__supporting-text">
+
+      <div class="mdl-card__title">
+
+        <h4 class="mdl-card__title-text">Your Home</h4>
+
+      </div>
+
+      <ul *ngIf="model"
+            class="demo-list-item mdl-list">
+
+          <li class="mdl-list__item">
+
+              <span class="mdl-list__item-primary-content">
+
+                <span class="mdl-list__item-sub-title">name</span>
+
+              </span>
+
+              <span class="mdl-list__item-secondary-content"> {{model.name}} </span>
+
+          </li>
+
+          <li class="mdl-list__item">
+
+              <span class="mdl-list__item-primary-content">
+
+                <span class="mdl-list__item-sub-title">mode</span>
+
+              </span>
+
+              <span class="{{model.away}} mdl-list__item-secondary-content">
+
+                 {{model.away == 'home' ? 'at' : ''}} {{model.away}}
+
+              </span>
+
+          </li>
+
+        </ul>
+
+    </div>
+
+  </div>
+
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--stretch">
+
+    <weather [structureid]="model.structure_id"></weather>
+
+  </div>
+
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--stretch"
+       *ngFor="#alarm of alarms | async">
+
+    <alarm [model]="alarm" [where]="model.wheres[alarm.where_id].name"></alarm>
+
+  </div>
+
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--stretch"
+       *ngFor="#thermostat of thermostats | async" >
+
+    <thermostat [model]="thermostat" [where]="model.wheres[thermostat.where_id].name"></thermostat>
+
+  </div>
+
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-cell--stretch"
+       *ngFor="#camera of cameras | async">
+
+    <camera [model]="camera" [where]="model.wheres[camera.where_id].name"></camera>
+
+  </div>
+
+</div>

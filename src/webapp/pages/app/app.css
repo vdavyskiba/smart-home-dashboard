@@ -1,0 +1,77 @@
+body {
+  background: #fafafa;
+}
+
+.offline {
+  color: rgb(244,67,54);
+}
+
+.ok,
+.home,
+.online {
+  color: rgb(76,175,80);
+}
+
+.away {
+  color: rgb(33,150,243);
+}
+
+.warning {
+  color: rgb(255,152,0);
+}
+
+.emergency {
+  color: rgb(244,67,54);
+}
+
+.mdl-layout__header .mdl-layout__tab.router-link-active {
+  color: rgb(255,255,255);
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.mdl-list {
+  padding: 0;
+  margin-top: 0;
+}
+
+.mdl-layout__header .mdl-layout__tab.router-link-active::after {
+  height: 4px;
+  width: 100%;
+  display: block;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: white;
+}
+
+.mdl-card__title {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mdl-card__supporting-text {
+  width: auto;
+}
+
+.demo-list-item .mdl-list__item {
+  white-space: nowrap;
+}
+
+.mdl-list__item-sub-title {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 840px){
+  .mdl-card {
+    min-height: 266px;
+  }
+}
+

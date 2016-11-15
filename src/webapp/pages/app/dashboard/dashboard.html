@@ -1,0 +1,24 @@
+<div class="mdl-grid">
+
+  <div class="mdl-cell mdl-cell--12-col">
+
+    <status></status>
+
+    <hr>
+
+  </div>
+
+  <div class="mdl-cell mdl-cell--12-col"
+       *ngFor="#structure of structures | async">
+
+    <structure [model]="structure"></structure>
+
+    <hr>
+
+  </div>
+
+</div>
+
+
+
+
