@@ -1,7 +1,7 @@
 require('ts-node/register');
 
 exports.config = {
-  baseUrl: 'http://localhost:8080/',
+  baseUrl: 'http://localhost:3000/',
 
   // use `npm run e2e`
   specs: [
@@ -24,7 +24,7 @@ exports.config = {
   directConnect: true,
 
   capabilities: {
-    'browserName': 'chrome',
+    'browserName': 'firefox',
     'chromeOptions': {
       'args': ['show-fps-counter=true']
     }
@@ -34,14 +34,11 @@ exports.config = {
     browser.ignoreSynchronization = true;
   },
 
-  seleniumServerJar: "node_modules/protractor/selenium/selenium-server-standalone-2.48.2.jar",
-
   /**
    * Angular 2 configuration
    *
    * useAllAngular2AppRoots: tells Protractor to wait for any angular2 apps on the page instead of just the one matching
    * `rootEl`
-   *
    */
-   useAllAngular2AppRoots: true
+  useAllAngular2AppRoots: true
 };
