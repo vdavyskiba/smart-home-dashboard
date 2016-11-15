@@ -17,9 +17,10 @@ before_install:
 install:
     - npm i -g npm@^3
     - npm config set spin false
-    - npm install webpack-dev-server rimraf webpack -g
+    - npm install rimraf webpack -g
     - npm install
     - npm install typings -g
+    - typings install
 before_script:
     - export CHROME_BIN=chromium-browser
     - export DISPLAY=:99.0
@@ -28,4 +29,7 @@ before_script:
     - npm start &
     - sleep 5
 script:
-    - npm run ci
+    - npm run lint
+    - npm run build:prod
+    - npm run test
+    - npm run e2e

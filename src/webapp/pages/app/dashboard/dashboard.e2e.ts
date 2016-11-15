@@ -1,3 +1,5 @@
+import {describe, it, beforeEach, expect, browser, element, by} from 'angular2/testing';
+
 describe('Dashboard', () => {
 
   beforeEach(() => {

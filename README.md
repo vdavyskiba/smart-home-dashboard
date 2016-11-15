@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vdavyskiba/angular-app.svg?branch=master)](https://travis-ci.org/vdavyskiba/angular-app)
+[![Build Status](https://travis-ci.org/vdavyskiba/smart-home-dashboard.svg?branch=master)](https://travis-ci.org/vdavyskiba/smart-home-dashboard)
 
 Log in with your Nest account. 
 You need some Nest devices(emulators is ok) in you Nest Home to see devices data
