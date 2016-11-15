@@ -1,4 +1,5 @@
-import {describe, it, beforeEach, expect, browser, element, by} from 'angular2/testing';
+import {describe, it, beforeEach, expect} from 'angular2/testing';
+import { browser, by, element } from 'protractor';
 
 describe('Dashboard', () => {
 
