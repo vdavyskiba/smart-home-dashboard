@@ -16,7 +16,7 @@ For development you need to install next global dependencies:
 - "typings install"
 - "npm run server" to start dev server
 
-- put to .env file your NEST_ID and NEST_SECRET instead of preset mine one
+- put to .env file your NEST_ID and NEST_SECRET
 - open you Nest product page and set "Redirect URI" to you host - "http://localhost:3000/auth/nest/callback"
 - "npm run start" to start server
 - open http://localhost:3000 in your browser
