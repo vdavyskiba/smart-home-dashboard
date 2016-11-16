@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 var http = require('http');
 var https = require('https');
 var path = require('path');
@@ -11,6 +9,11 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var NestStrategy = require('passport-nest').Strategy;
 var session = require('express-session');
+
+//get environment variables
+if (process.env.NODE_ENV !== 'production'){
+  require('dotenv').config();
+}
 
 var SUPER_SECRET_KEY = 'secret_key';
 
